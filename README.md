@@ -30,19 +30,107 @@ Another aspect is that the data set should be formatted in such a way that more 
 
 
 ## ALGORITHM:
-STEP 1:Importing the libraries<BR>
-STEP 2:Importing the dataset<BR>
-STEP 3:Taking care of missing data<BR>
-STEP 4:Encoding categorical data<BR>
-STEP 5:Normalizing the data<BR>
-STEP 6:Splitting the data into test and train<BR>
+#### STEP 1:
+Importing the libraries<BR>
+#### STEP 2:
+Importing the dataset<BR>
+#### STEP 3:
+Taking care of missing data<BR>
+#### STEP 4:
+Encoding categorical data<BR>
+#### STEP 5:
+Normalizing the data<BR>
+#### STEP 6:
+Splitting the data into test and train<BR>
+
 
 ##  PROGRAM:
-TYPE YOUR CODE HERE
+```
+#import libraries
 
+import pandas as pd
+import numpy as np
+import io
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
+
+#Read the dataset from drive
+d=pd.read_csv("Churn_Modelling.csv")
+df=pd.DataFrame(d)
+d.head()
+d
+
+#Finding Missing Values
+print(d.isnull().sum())
+
+d.info()
+d.drop(['Surname', 'Geography','Gender'], axis=1)
+
+#Check for Duplicates
+print(d.duplicated().sum())
+
+#Detect Outliers
+#Calculate the first quartile (Q1) and third quartile (Q3)
+Q1 = d.quantile(0.25)
+Q3 = d.quantile(0.75)
+
+#Calculate the IQR
+IQR = Q3 - Q1
+
+#Normalize the dataset
+#Create an instance of MinMaxScaler
+scaler = MinMaxScaler()
+
+#Define the columns to be normalized
+columns = ['CreditScore', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'EstimatedSalary']
+
+#Normalize the specified columns
+d[columns] = scaler.fit_transform(d[columns])
+
+#Display the normalized dataset
+print("NORMALIZED DATASET\n",d)
+
+#split the dataset into input and output
+X = d.iloc[:,:-1].values
+print("INPUT(X)\n",X)
+y = d.iloc[:,-1].values
+print("OUTPUT(y)\n",y)
+
+
+#splitting the data for training & Testing
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+print("X_train\n")
+print(X_train)
+print("\nX_test\n")
+print(X_test)
+print("\nY_train\n")
+print(y_train)
+print("\nY_test\n")
+print(y_test)
+```
 
 ## OUTPUT:
-SHOW YOUR OUTPUT HERE
+### d.head()
+
+### d.isnull().sum()
+
+### d.sum()
+
+### After dropping categorical data
+
+### Number of duplicates
+
+### Identifying outliers
+
+### Normalized dataset
+
+### X and Y
+
+### X_train,X_test,Y_train,Y_test
 
 
 ## RESULT:
