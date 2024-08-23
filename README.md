@@ -49,7 +49,6 @@ Splitting the data into test and train<BR>
 #import libraries
 
 import pandas as pd
-import numpy as np
 import io
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -59,38 +58,29 @@ from sklearn.model_selection import train_test_split
 
 #Read the dataset from drive
 d=pd.read_csv("Churn_Modelling.csv")
-df=pd.DataFrame(d)
-d.head()
-d
-
-#Finding Missing Values
+# Finding Missing Values
 print(d.isnull().sum())
-
-d.info()
-d.drop(['Surname', 'Geography','Gender'], axis=1)
 
 #Check for Duplicates
 print(d.duplicated().sum())
 
 #Detect Outliers
-#Calculate the first quartile (Q1) and third quartile (Q3)
-Q1 = d.quantile(0.25)
-Q3 = d.quantile(0.75)
-
-#Calculate the IQR
-IQR = Q3 - Q1
+plt.figure(figsize=(6,4))
+sns.scatterplot(x='Age', y='Exited', data=d)
+plt.title('Scatter plot of Age vs. Exited')
+plt.show()
 
 #Normalize the dataset
-#Create an instance of MinMaxScaler
+# Create an instance of MinMaxScaler
 scaler = MinMaxScaler()
 
-#Define the columns to be normalized
+# Define the columns to be normalized
 columns = ['CreditScore', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'EstimatedSalary']
 
-#Normalize the specified columns
+# Normalize the specified columns
 d[columns] = scaler.fit_transform(d[columns])
 
-#Display the normalized dataset
+# Display the normalized dataset
 print("NORMALIZED DATASET\n",d)
 
 #split the dataset into input and output
@@ -99,39 +89,36 @@ print("INPUT(X)\n",X)
 y = d.iloc[:,-1].values
 print("OUTPUT(y)\n",y)
 
-
 #splitting the data for training & Testing
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 print("X_train\n")
 print(X_train)
+print("\nLenght of X_train ",len(X_train))
 print("\nX_test\n")
 print(X_test)
-print("\nY_train\n")
-print(y_train)
-print("\nY_test\n")
-print(y_test)
+print("\nLenght of X_test ",len(X_test))
+
 ```
 
 ## OUTPUT:
-### d.head()
-
-### d.isnull().sum()
-
-### d.sum()
-
-### After dropping categorical data
+### Missing Data
+![alt text](<Screenshot 2024-08-23 213007.png>)
 
 ### Number of duplicates
+![alt text](<Screenshot 2024-08-23 213030.png>)
 
-### Identifying outliers
+### Outliers
+![alt text](<Screenshot 2024-08-23 213017.png>)
 
 ### Normalized dataset
+![alt text](<Screenshot 2024-08-23 213103.png>)
 
 ### X and Y
+![alt text](<Screenshot 2024-08-23 213145.png>)
 
 ### X_train,X_test,Y_train,Y_test
-
+![alt text](<Screenshot 2024-08-23 213200.png>)
 
 ## RESULT:
 Thus, Implementation of Data Preprocessing is done in python  using a data set downloaded from Kaggle.
