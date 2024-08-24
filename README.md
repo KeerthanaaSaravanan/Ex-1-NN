@@ -1,3 +1,4 @@
+<br>
 <H3>ENTER YOUR NAME: Keerthana S</H3>
 <H3>ENTER YOUR REGISTER NO: 212223240070</H3>
 <H3>EX. NO.1</H3>
@@ -38,6 +39,8 @@ Data Preprocessing is the process of making data suitable for use while training
 For achieving better results from the applied model in Machine Learning projects the format of the data has to be in a proper manner. Some specified Machine Learning model needs information in a specified format, for example, Random Forest algorithm does not support null values, therefore to execute random forest algorithm null values have to be managed from the original raw data set.
 Another aspect is that the data set should be formatted in such a way that more than one Machine Learning and Deep Learning algorithm are executed in one data set, and best out of them is chosen.
 
+<br>
+<br>
 <br>
 
 ## ALGORITHM:
