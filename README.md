@@ -130,12 +130,14 @@ print("\nLenght of X_test ",len(X_test))
 
 ### Normalized dataset
 ![alt text](<Screenshot 2024-08-23 213103.png>)
-
+<BR>
 ### X and Y
 ![alt text](<Screenshot 2024-08-23 213145.png>)
-
+<BR>
 ### X_train,X_test,Y_train,Y_test
 ![alt text](<Screenshot 2024-08-23 213200.png>)
+
+<BR>
 
 ## RESULT:
 Thus, Implementation of Data Preprocessing is done in python  using a data set downloaded from Kaggle.
