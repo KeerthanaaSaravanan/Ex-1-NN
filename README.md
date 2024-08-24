@@ -7,17 +7,21 @@
 <br>
 
 ## AIM:
+To perform Data preprocessing in a data set downloaded from Kaggle.
 
-To perform Data preprocessing in a data set downloaded from Kaggle
 <br>
+
 ## EQUIPMENTS REQUIRED:
 Hardware – PCs
 Anaconda – Python 3.7 Installation / Google Colab /Jupiter Notebook
+
 <br>
+
 ## RELATED THEORETICAL CONCEPT:
 <br>
 
 **Kaggle :**
+
 Kaggle, a subsidiary of Google LLC, is an online community of data scientists and machine learning practitioners. Kaggle allows users to find and publish data sets, explore and build models in a web-based data-science environment, work with other data scientists and machine learning engineers, and enter competitions to solve data science challenges.
 <br>
 
@@ -35,6 +39,7 @@ Another aspect is that the data set should be formatted in such a way that more 
 <br>
 
 ## ALGORITHM:
+
 #### STEP 1:
 Importing the libraries<BR>
 #### STEP 2:
