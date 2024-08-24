@@ -127,13 +127,19 @@ print("\nLenght of X_test ",len(X_test))
 <br>
 ### Outliers
 ![alt text](<Screenshot 2024-08-23 213017.png>)
-
+<BR>
+<BR>
 ### Normalized dataset
 ![alt text](<Screenshot 2024-08-23 213103.png>)
+
 <BR>
+
 ### X and Y
 ![alt text](<Screenshot 2024-08-23 213145.png>)
+
 <BR>
+<BR>
+  
 ### X_train,X_test,Y_train,Y_test
 ![alt text](<Screenshot 2024-08-23 213200.png>)
 
