@@ -1,24 +1,16 @@
 #Import Libraries
 from google.colab import files
 import pandas as pd
-import seaborn as sns
 import io
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
-from scipy import stats
-import numpy as np
 
 #Read the dataset
 df=pd.read_csv("/content/Churn_Modelling.csv")
 
 #Check the missing data
 df.isnull().sum()
-
-#checking data
-df.head()
-df.tail()
-df.columns
 
 # Finding Missing Values
 print(df.isnull().sum())
