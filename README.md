@@ -116,27 +116,32 @@ print("\nLenght of X_test ",len(X_test))
 ```
 ## OUTPUT:
 ### Dataset:
+![image](https://github.com/user-attachments/assets/b63534a2-dfd2-45c1-b75f-ea3144cdf36b)
 
 
 
 ### Finding Missing Values:
+![image](https://github.com/user-attachments/assets/2bc4209a-27ed-4ca2-bf7f-03c7c1c75e7b)
 
 
 <br>
 
 ### Handling Missing values:
+![image](https://github.com/user-attachments/assets/051705cf-b0a4-4449-89e9-992295bf90d9)
 
 
 <BR>
 <BR>
 
 ### Duplicates:
+![image](https://github.com/user-attachments/assets/fbb42d1c-5d75-4bbc-871e-03490d2b59c2)
 
 
 
 <BR>
 
-### Normalize the dataset:
+### Normalized dataset:
+![image](https://github.com/user-attachments/assets/c1ca252f-ddf4-441d-a7a8-8b8302278591)
 
 
 
@@ -144,10 +149,12 @@ print("\nLenght of X_test ",len(X_test))
 <BR>
   
 ### Split the dataset into input and output:
+![image](https://github.com/user-attachments/assets/f70a525d-0932-4be4-bc44-c63d2f975d1f)
 
 
 
 ### Splitting the data for training & Testing:
+![image](https://github.com/user-attachments/assets/d7a99a72-7faf-4f84-89a5-9d9c091a78b4)
 
 
 <BR>
