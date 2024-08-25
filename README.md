@@ -123,9 +123,13 @@ print("\nLenght of X_test ",len(X_test))
 ## OUTPUT:
 ### Missing Values:
 ![1](https://github.com/user-attachments/assets/3af96bcb-8bc0-4407-ba2c-5c19224b7d1e)
+<br>
+<br>
 
 ### Outliers:
 ![2](https://github.com/user-attachments/assets/95e926f6-d411-482f-99e7-d6a0192c4111)
+
+<br>
 
 ### Normalized dataset:
 ![3](https://github.com/user-attachments/assets/d4fff95e-b747-4477-8e90-92a230ff93fb)
