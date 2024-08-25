@@ -66,24 +66,16 @@ Splitting the data into test and train<BR>
 #Import Libraries
 from google.colab import files
 import pandas as pd
-import seaborn as sns
 import io
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
-from scipy import stats
-import numpy as np
 
 #Read the dataset
 df=pd.read_csv("/content/Churn_Modelling.csv")
 
 #Check the missing data
 df.isnull().sum()
-
-#checking data
-df.head()
-df.tail()
-df.columns
 
 # Finding Missing Values
 print(df.isnull().sum())
@@ -132,35 +124,18 @@ print("\nLenght of X_test ",len(X_test))
 ### Missing Values:
 ![1](https://github.com/user-attachments/assets/3af96bcb-8bc0-4407-ba2c-5c19224b7d1e)
 
-
-<BR>
-<BR>
-
 ### Outliers:
 ![2](https://github.com/user-attachments/assets/95e926f6-d411-482f-99e7-d6a0192c4111)
-
-
-
-<BR>
 
 ### Normalized dataset:
 ![3](https://github.com/user-attachments/assets/d4fff95e-b747-4477-8e90-92a230ff93fb)
 
-
-<BR>
-<BR>
   
 ### Input & Output Values:
 ![4](https://github.com/user-attachments/assets/64d0988e-3d02-458b-806d-e0e6bdb29c70)
 
-
-
-
 ### Splitting the data for training & Testing:
 ![5](https://github.com/user-attachments/assets/e8efc242-91f5-4268-9392-0610103a1ca6)
-
-
-<BR>
 
 ## RESULT:
 Thus, Implementation of Data Preprocessing is done in python  using a data set downloaded from Kaggle.
