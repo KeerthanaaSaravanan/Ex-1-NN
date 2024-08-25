@@ -114,39 +114,40 @@ print(X_test)
 print("\nLenght of X_test ",len(X_test))
 
 ```
-
 ## OUTPUT:
-### Missing Data
-![Screenshot 2024-08-23 213007](https://github.com/user-attachments/assets/5a748f87-8d73-4ab5-a832-b4fa59600829)
+### Dataset:
 
 
 
-### Number of duplicates
-![2](https://github.com/user-attachments/assets/b7ea83e0-3c68-43f9-8499-97af0babb72a)
+### Finding Missing Values:
+
 
 <br>
 
-### Outliers
-![3](https://github.com/user-attachments/assets/1602f7d1-5dd0-4ca7-9c2c-d6d352d02f13)
-
-<BR>
-<BR>
-
-### Normalized dataset
-![4](https://github.com/user-attachments/assets/f57415b3-f3e2-421b-94e6-bd4612cba991)
+### Handling Missing values:
 
 
 <BR>
+<BR>
 
-### X and Y
-![5](https://github.com/user-attachments/assets/5198e027-e8d3-4b98-91ea-f8e1a6df8f95)
+### Duplicates:
+
+
+
+<BR>
+
+### Normalize the dataset:
+
 
 
 <BR>
 <BR>
   
-### X_train,X_test,Y_train,Y_test
-![6](https://github.com/user-attachments/assets/76a8bfa1-a625-4167-a220-2403ebe77af3)
+### Split the dataset into input and output:
+
+
+
+### Splitting the data for training & Testing:
 
 
 <BR>
