@@ -1,5 +1,5 @@
 <br>
-<H3>NAME: Keerthana S</H3>
+<H3>NAME: KEERTHANA S</H3>
 <H3>REGISTER NO: 212223240070</H3>
 <H3>EX. NO.1</H3>
 <H3>DATE:22-08-2024</H3>
@@ -63,7 +63,7 @@ Splitting the data into test and train<BR>
 
 ##  PROGRAM:
 ```
-#import libraries
+#Import Libraries
 from google.colab import files
 import pandas as pd
 import io
@@ -71,93 +71,88 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 
-#Read the dataset from drive
-df=pd.read_csv('/content/Churn_Modelling.csv')
-df
+#Read the dataset
+df=pd.read_csv("/content/Churn_Modelling.csv")
+
+#Check the missing data
+df.isnull().sum()
 
 # Finding Missing Values
 print(df.isnull().sum())
 
-#Handling Missing values
-df.fillna(df.mean(),inplace=True)
-print(df.isnull().sum())
-
-y=df.iloc[:,-1].values
-print(y)
-
 #Check for Duplicates
 df.duplicated()
 
-#Detect Outliers
+#Assigning Y
+y = df.iloc[:, -1].values
+print(y)
+
+#Check for duplicates
+df.duplicated()
+
+#Check for outliers
 df.describe()
+print(df.describe())
+
+#Dropping string values data from dataset
+data = df.drop(['Surname', 'Geography','Gender'], axis=1)
+data.head()
 
 #Normalize the dataset
 scaler=MinMaxScaler()
 df1=pd.DataFrame(scaler.fit_transform(data))
 print(df1)
 
-#split the dataset into input and output
-x=df.iloc[:, :-1].values
-print(x)
+#Split the dataset
+X=df.iloc[:,:-1].values
 y=df.iloc[:,-1].values
+print(X)
 print(y)
 
-#splitting the data for training & Testing
-X_train ,X_test ,y_train,y_test=train_test_split(x,y,test_size=0.2)
+#Splitting the data for training & testing
+X_train ,X_test ,y_train,y_test=train_test_split(X,y,test_size=0.2)
 
-#Print the training data and testing data
+#Training and testing model
 print("X_train\n")
 print(X_train)
 print("\nLenght of X_train ",len(X_train))
 print("\nX_test\n")
 print(X_test)
 print("\nLenght of X_test ",len(X_test))
-
 ```
 ## OUTPUT:
-### Dataset:
-![image](https://github.com/user-attachments/assets/b63534a2-dfd2-45c1-b75f-ea3144cdf36b)
+### Missing Values:
+<br>
 
+![1](https://github.com/user-attachments/assets/3af96bcb-8bc0-4407-ba2c-5c19224b7d1e)
+<br>
+<br>
+<br>
+<br>
 
+### Outliers:
+<br>
 
-### Finding Missing Values:
-![image](https://github.com/user-attachments/assets/2bc4209a-27ed-4ca2-bf7f-03c7c1c75e7b)
-
+![2](https://github.com/user-attachments/assets/95e926f6-d411-482f-99e7-d6a0192c4111)
 
 <br>
 
-### Handling Missing values:
-![image](https://github.com/user-attachments/assets/051705cf-b0a4-4449-89e9-992295bf90d9)
-
-
-<BR>
-<BR>
-
-### Duplicates:
-![image](https://github.com/user-attachments/assets/fbb42d1c-5d75-4bbc-871e-03490d2b59c2)
-
-
-
-<BR>
-
 ### Normalized dataset:
-![image](https://github.com/user-attachments/assets/c1ca252f-ddf4-441d-a7a8-8b8302278591)
+<br>
 
+![3](https://github.com/user-attachments/assets/d4fff95e-b747-4477-8e90-92a230ff93fb)
 
-
-<BR>
-<BR>
   
-### Split the dataset into input and output:
-![image](https://github.com/user-attachments/assets/f70a525d-0932-4be4-bc44-c63d2f975d1f)
+### Input & Output Values:
+<br>
 
-
+![4](https://github.com/user-attachments/assets/64d0988e-3d02-458b-806d-e0e6bdb29c70)
 
 ### Splitting the data for training & Testing:
-![image](https://github.com/user-attachments/assets/d7a99a72-7faf-4f84-89a5-9d9c091a78b4)
+<br>
 
-
-<BR>
+![5](https://github.com/user-attachments/assets/e8efc242-91f5-4268-9392-0610103a1ca6)
+<br>
 
 ## RESULT:
 Thus, Implementation of Data Preprocessing is done in python  using a data set downloaded from Kaggle.
