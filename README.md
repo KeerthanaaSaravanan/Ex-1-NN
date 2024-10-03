@@ -1,9 +1,9 @@
-## EX NO-01: Introduction to Kaggle and Data preprocessing
+## Introduction to Kaggle and Data preprocessing
 
 <H3>NAME: KEERTHANA S</H3>
 <H3>REGISTER NO: 212223240070</H3>
 <H3>EX. NO.1</H3>
-<H3>DATE:22-08-2024</H3>
+<H3>DATE:</H3>
 
 ## AIM:
 To perform Data preprocessing in a data set downloaded from Kaggle.
