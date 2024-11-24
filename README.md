@@ -6,11 +6,11 @@
 <H3>DATE:19.08.24</H3>
 
 ## AIM:
-To perform Data preprocessing in a data set downloaded from Kaggle.
+To perform Data preprocessing in a dataset downloaded from Kaggle.
 
 ## EQUIPMENTS REQUIRED:
-Hardware – PCs
-Anaconda – Python 3.7 Installation / Google Colab /Jupiter Notebook
+-Hardware – PCs
+-Anaconda – Python 3.7 Installation / Google Colab /Jupiter Notebook
 
 ## RELATED THEORETICAL CONCEPT:
 
