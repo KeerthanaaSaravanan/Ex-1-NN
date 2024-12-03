@@ -45,53 +45,49 @@ Splitting the data into test and train<BR>
 
 ##  PROGRAM:
 ```py
-# Step 1: Import Libraries
+
+# Import Libraries
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 
-# Step 2: Load the Dataset
+# Read the dataset
 df = pd.read_csv("/content/sample_data/Churn_Modelling_NN1.csv")
 
-# Step 3: Data Cleaning and Exploration
-# Check for missing values
+# Handling Missing Values
 print("Missing Values:\n", df.isnull().sum(), "\n")
 
-# Check for duplicates
+# Handle duplicates (if any)
 duplicates = df.duplicated().sum()
 print(f"Number of duplicate rows: {duplicates}\n")
 
-# Check for outliers using summary statistics
+# Check for Outliers using describe()
 print("Outliers (Summary Statistics):\n", df.describe(), "\n")
 
-# Step 4: Data Preprocessing
-# Drop unnecessary columns
-columns_to_drop = ['Surname', 'Geography', 'Gender']
-df = df.drop(columns=columns_to_drop, axis=1)
+# Drop unnecessary columns (like 'Surname', 'Geography', and 'Gender')
+df = df.drop(['Surname', 'Geography', 'Gender'], axis=1)
 
-# Normalize the dataset (except the target column)
+# Normalize the dataset using MinMaxScaler
 scaler = MinMaxScaler()
-features = df.drop('Exited', axis=1)  # Exclude target column
-df_normalized = pd.DataFrame(scaler.fit_transform(features), columns=features.columns)
+df_normalized = pd.DataFrame(scaler.fit_transform(df.drop('Exited', axis=1)), columns=df.columns[:-1])
 
-# Show the normalized dataset
-print("Normalized Dataset:\n", df_normalized.head(), "\n")
+# Normalized dataset
+print("Normalized dataset:\n", df_normalized.head(), "\n")
 
-# Step 5: Define Features and Target
-X = df_normalized.values  # Input features
-y = df['Exited'].values   # Target column
+# Define features (X) and target (y)
+X = df_normalized.values
+y = df['Exited'].values
 
-# Preview Input and Output Values
-print("Input Values (Features):\n", X[:5])  # First 5 rows of features
-print("\nOutput Values (Target):\n", y[:5])  # First 5 target values
+# Input & Output Values
+print("Input Values (Features):\n", X[:5])  # Show first 5 rows of features
+print("\nOutput Values (Target):\n", y[:5])  # Show first 5 values of target
 
-# Step 6: Split the Data into Training and Testing Sets
+# Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Print Sizes of Training and Testing Data
-print(f"\nTraining Data Size: {len(X_train)}")
-print(f"Testing Data Size: {len(X_test)}")
-
+# Splitting the data for training & testing
+print(f"\nTraining data size: {len(X_train)}")
+print(f"Testing data size: {len(X_test)}")
 
 ```
 ## OUTPUT:
